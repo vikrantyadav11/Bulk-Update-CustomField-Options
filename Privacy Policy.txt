@@ -1,0 +1,68 @@
+1. Introduction
+
+Bulk Update Custom Field Options (“the App”) is a Jira Cloud app built using the Atlassian Forge platform. This Privacy Policy explains how the App handles data when installed and used within your Jira Cloud environment.
+
+By using the App, you agree to the practices described in this Privacy Policy.
+
+2. Data Collection
+
+The App does not collect, store, or transmit any personal data outside of your Atlassian Cloud instance.
+
+The App only processes the following Jira configuration data within your Jira site:
+
+Custom Field IDs
+
+Context IDs
+
+Custom Field Option values (text values provided by the Jira administrator)
+
+No user profile information, email addresses, or issue content is collected.
+
+3. Data Storage
+
+The App does not use external servers or databases.
+
+All processing is performed within Atlassian’s Forge runtime (inside Atlassian’s infrastructure).
+
+No data is persisted beyond the scope of the operation requested (e.g., adding, removing, or disabling field options).
+
+4. Data Sharing
+
+The App does not share any data with third parties.
+
+The App only communicates with the Jira Cloud REST API via the Atlassian Forge platform.
+
+5. Security
+
+The App relies on Atlassian Forge’s secure execution environment.
+
+Permissions are strictly limited to those required for functionality:
+
+manage:jira-configuration
+
+read:field.option:jira
+
+write:field.option:jira
+
+6. User Consent
+
+By installing and using the App, you consent to the processing of Jira configuration data strictly for the purposes of managing custom field options.
+
+7. Changes to This Policy
+
+We may update this Privacy Policy to reflect improvements or regulatory requirements. Changes will be posted with an updated “Last updated” date.
+
+8. Contact
+
+If you have any questions or concerns about this Privacy Policy, please contact:
+
+App Owner: [Your Name / Company]
+Email: [Your Contact Email]
+
+✅ This is Marketplace-compliant because:
+
+No personal data is collected or stored.
+
+Clear scope of permissions.
+
+Explains security and Forge hosting.
