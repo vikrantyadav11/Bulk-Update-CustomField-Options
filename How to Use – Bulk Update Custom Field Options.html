@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Use – Bulk Update Custom Field Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f8fafc;
+      color: #1a1a1a;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #0789E6;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    main {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h1, h2, h3 {
+      color: #0789E6;
+    }
+    code, pre {
+      background: #f1f5f9;
+      padding: 4px 8px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .note {
+      background: #fef9c3;
+      padding: 10px;
+      border-left: 4px solid #facc15;
+      margin: 15px 0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>How to Use – Bulk Update Custom Field Options</h1>
+    <p>A simple guide for Jira administrators</p>
+  </header>
+
+  <main>
+    <h2>1. Open the App</h2>
+    <ol>
+      <li>In Jira, go to <strong>⚙️ Settings → Apps → Bulk Update Custom Field Options</strong>.</li>
+      <li>The app will open in your Jira admin page.</li>
+    </ol>
+
+    <h2>2. Enter Field & Context IDs</h2>
+    <p><strong>Custom Field ID</strong> – Use the format <code>customfield_12345</code>.</p>
+    <p><strong>Context ID</strong> – The numeric ID of the field context (e.g., <code>10123</code>).</p>
+    <div class="note">
+      💡 Tip: Find these IDs in <strong>Jira Admin → Custom Fields → Edit Configuration → API URL</strong>.
+    </div>
+
+    <h2>3. Add Options</h2>
+    <ol>
+      <li>Go to the <strong>Add Options</strong> section.</li>
+      <li>Enter option values, separated by commas:<br>
+        <code>Option A, Option B, Option C</code>
+      </li>
+      <li>Click <strong>Add Options</strong>.</li>
+      <li>The app will:<br>
+        ✅ Create all new options.<br>
+        ⚠️ Skip existing options and show them in feedback.
+      </li>
+    </ol>
+
+    <h2>4. Remove Options</h2>
+    <ol>
+      <li>Go to the <strong>Remove Options</strong> section.</li>
+      <li>Enter values to remove:<br>
+        <code>Option X, Option Y, Option Z</code>
+      </li>
+      <li>Click <strong>Remove Options</strong>.</li>
+      <li>The app will:<br>
+        ✅ Remove up to 100 options at once.<br>
+        ⚠️ Show which values were not found.
+      </li>
+    </ol>
+
+    <h2>5. Disable Options</h2>
+    <ol>
+      <li>Go to the <strong>Disable Options</strong> section.</li>
+      <li>Enter values to disable:<br>
+        <code>Option A, Option B, Option C</code>
+      </li>
+      <li>Click <strong>Disable Options</strong>.</li>
+      <li>The app will:<br>
+        ✅ Disable up to 100 options at once.<br>
+        ⚠️ Show which values were not found.
+      </li>
+    </ol>
+
+    <h2>6. Example Workflow</h2>
+    <pre>
+Field ID: customfield_10058
+Context ID: 10143
+
+Add: New Option 1, New Option 2 → ✅ Added
+Remove: Old Option 3 → ✅ Removed
+Disable: Legacy Option 4 → ✅ Disabled
+    </pre>
+
+    <h2>7. Error Messages</h2>
+    <ul>
+      <li><strong>Skipped (already exist)</strong> – Shown when adding duplicates.</li>
+      <li><strong>Not Found</strong> – Shown when removing/disabling non-existent options.</li>
+      <li><strong>Authentication Error (401)</strong> – App not installed with correct permissions.</li>
+      <li><strong>Limit Reached</strong> – Only 100 options can be removed/disabled at once.</li>
+    </ul>
+
+    <h2>8. Best Practices</h2>
+    <ul>
+      <li>Always double-check Field ID and Context ID before making changes.</li>
+      <li>Use <strong>Disable</strong> instead of <strong>Remove</strong> to keep history intact.</li>
+      <li>For large updates, process in batches (100 at a time).</li>
+    </ul>
+  </main>
+
+  <footer>
+    <p>© 2025 Bulk Update Custom Field Options – Built with Atlassian Forge</p>
+  </footer>
+</body>
+</html>
